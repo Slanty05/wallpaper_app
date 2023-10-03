@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -7,7 +7,7 @@ import 'package:wallpaper_manager/wallpaper_manager.dart';
 class FullScreen extends StatefulWidget {
   final String imageurl;
 
-  const FullScreen({Key? key, required this.imageurl}) : super(key: key);
+  const FullScreen({super.key, required this.imageurl});
 
   @override
   _FullScreenState createState() => _FullScreenState();

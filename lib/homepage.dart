@@ -37,8 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
     String url =
         'https://api.pexels.com/v1/curated?per_page=80&page=' + page.toString();
-    await http.get(Uri.parse(url), headers: {'Authorization': 'YOUR_KEY'}).then(
-        (value) {
+    await http.get(Uri.parse(url), headers: {
+      'Authorization':
+          'f68XnAUCsOpzXT7OySJim7vutrzmtss0OwpNGMF2rLRzysuFLH0m8j4G'
+    }).then((value) {
       Map result = jsonDecode(value.body);
       setState(() {
         images.addAll(result['photos']);
